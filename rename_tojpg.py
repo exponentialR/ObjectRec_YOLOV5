@@ -18,6 +18,8 @@ args = parser.parse_args ()
 
 
 def rename_to_jpg(img_dir, extension, old_format1, old_format2):
+    """"This function renames all file format/extension from old_format1 or old_format2 to extension
+    e.g i.png to i.jpg"""
     current = str (pathlib.Path ().resolve ())
     img_dir = str(img_dir)
     path = '{}\{}'.format(current, img_dir)
