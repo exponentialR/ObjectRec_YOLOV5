@@ -28,13 +28,13 @@ def extract_bounding_box(frame, path):
 
 
 cam = cv2.VideoCapture(0)
-path = r'C:\Users\Research\Obj_Rec\best.pt'
+path = r'C:\Users\Research\Obj_Rec\best.pt' # Replace with your Model Path
 while True:
     _, image = cam.read()
     # time.sleep(2.0)
-    # keypoints = extract_bounding_box(image, path)
-    # print(keypoints)
-    # cv2.rectangle(img, (l, t), (r, b), (255, 0, 255), 2)
+    keypoints = extract_bounding_box(image, path)
+    print(keypoints)
+    cv2.rectangle(img, (l, t), (r, b), (255, 0, 255), 2)
     cv2.imshow('out', image)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
